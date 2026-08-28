@@ -1,0 +1,190 @@
+/* =====================
+   Base
+   ===================== */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap');
+
+
+
+body {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  color: #6E6D6A;
+  background-image: url('media/wallpaper.gif');
+  background-repeat: repeat;
+  background-color: white;
+  background-size: 300px;
+}
+
+/* =====================
+   Typography
+   ===================== */
+a {
+  color: #6E6D6A;
+  text-decoration: underline dashed;
+}
+
+mark {
+  color: inherit;
+  padding: 0 0.1em;
+  background: linear-gradient(
+    to top,
+    #fff3b0 60%,
+    transparent 60%
+  );
+}
+
+hr {
+  margin: 100px 0 0;
+  border: none;
+  height: 0.5px;
+  background-color: #595F63;
+}
+
+/* =====================
+   Media
+   ===================== */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+figcaption {
+  font-size: 0.8em;
+  color: #595F63;
+  text-align: right;
+}
+
+/* =====================
+   Table
+   ===================== */
+table {
+  width: 100%;
+  font-size: smaller;
+  border-collapse: collapse;
+  table-layout: fixed;
+  overflow: hidden;
+}
+
+table td {
+  padding: 8px 4px;
+  border: 0.5px solid black;
+  text-align: center;
+  vertical-align: middle;
+  word-break: keep-all;
+}
+
+tr:first-child td,
+table td:first-child {
+  color: #595F63;
+}
+
+/* =====================
+   Components
+   ===================== */
+.box,
+details {
+  margin: 20px 0;
+  padding: 10px 20px;
+  border-radius: 12px;
+  color: #6E6D6A;
+  background-color: #EBE9E0;
+}
+
+.minibox {
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border-radius: 12px;
+  color: #6E6D6A;
+  background-color: #EBE9E0;
+}
+
+.box a,.minibox a
+.linkcard a,
+details a {
+  color: #6E6D6A;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+/* =====================
+   Table of Contents
+   ===================== */
+.toc-h2,
+.toc-h3,
+.toc-h3 {
+  display: block;
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+  color: #6E6D6A;
+  text-decoration: none;
+}
+
+.toc-h3 {
+  padding-left: 20px;
+}
+.toc-h4 {
+  padding-left: 40px;
+}
+
+.nav-list {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 0.4rem 3rem;
+    list-style: square;
+    padding-left: 1.4rem;
+    justify-content: start;
+  }
+
+/* =====================
+   File Type Icons
+   ===================== */
+.nav-list li:has(a[href$=".pdf"]),
+.nav-list li:has(a[href$=".txt"]),
+.nav-list li:has(a[href$=".tex"]),
+.nav-list li:has(a[href$=".png"]),
+.nav-list li:has(a[href$=".jpg"]),
+.nav-list li:has(a[href$=".jpeg"]) {
+  list-style: none;
+}
+
+.nav-list li:has(a[href$=".pdf"])::before,
+.nav-list li:has(a[href$=".txt"])::before,
+.nav-list li:has(a[href$=".tex"])::before,
+.nav-list li:has(a[href$=".png"])::before,
+.nav-list li:has(a[href$=".jpg"])::before,
+.nav-list li:has(a[href$=".jpeg"])::before {
+  content: '';
+  display: inline-block;
+  width: 1.5em;
+  height: 1.2em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: -0.15em;
+  margin-right: 0.3em;
+}
+
+.nav-list li:has(a[href$=".pdf"])::before  { background-image: url('media/pdf.png'); }
+.nav-list li:has(a[href$=".txt"])::before  { background-image: url('media/text.png'); }
+.nav-list li:has(a[href$=".tex"])::before  { background-image: url('media/tex.png'); }
+.nav-list li:has(a[href$=".png"])::before,
+.nav-list li:has(a[href$=".jpg"])::before,
+.nav-list li:has(a[href$=".jpeg"])::before { background-image: url('media/img.png'); }
+
+
+/* =====================
+   Responsive
+   ===================== */
+@media screen and (max-width: 400px) {
+  body {
+    padding: 20px;
+  }
+  .nav-list {
+    grid-template-columns: 1fr;
+  }
+}
