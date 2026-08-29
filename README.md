@@ -1,5 +1,5 @@
 # 16saiten.github.io
-[https://16saiten.github.io/](https://16saiten.github.io/)
+URL: [https://16saiten.github.io/](https://16saiten.github.io/)
 
 htmlの練習をしてみたかったので、NOTEの代わりに作ってみました。うまく作動するかな？
 
